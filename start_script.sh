@@ -16,11 +16,11 @@ sudo localectl set-locale LANG=ja_JP.utf8
 sudo timedatectl set-timezone Asia/Tokyo
 
 # time
-sudo yum install chrony
+sudo yum -y install chrony
 sudo cp -pr /etc/chrony.conf /etc/chrony.conf.org
 sudo echo "server ntp.nict.jp iburst" >> /etc/chrony.conf
 sudo systemctl enable chronyd
 sudo systemctl restart chronyd
 
 # tools
-sudo yum groupinstall "Development tools"
+sudo yum -y groupinstall "Development tools"
