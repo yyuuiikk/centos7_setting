@@ -25,7 +25,7 @@ sudo systemctl restart chronyd
 # tools
 sudo yum -y groupinstall "Development tools"
 
-# Gitを最新バージョンにする
+# 脆弱性対応済みのGitをインストールする
 sudo yum -y remove git*
 sudo yum -y install wget perl-CPAN gettext-devel perl-devel openssl-devel zlib-devel curl-devel expat-devel
 mkdir work
@@ -38,4 +38,3 @@ sudo make configure
 sudo ./configure --prefix=/usr
 sudo make all
 sudo make install
-
