@@ -33,6 +33,7 @@ cd work
 export GIT_VER=2.22.4
 wget https://mirrors.edge.kernel.org/pub/software/scm/git/git-${GIT_VER}.tar.gz
 tar xzvf git-${GIT_VER}.tar.gz
+rm -rf git-${GIT_VER}.tar.gz
 cd git-*
 sudo make configure
 sudo ./configure --prefix=/usr
