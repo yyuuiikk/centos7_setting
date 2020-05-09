@@ -24,3 +24,18 @@ sudo systemctl restart chronyd
 
 # tools
 sudo yum -y groupinstall "Development tools"
+
+# Gitを最新バージョンにする
+sudo yum -y remove git*
+sudo yum -y install wget perl-CPAN gettext-devel perl-devel openssl-devel zlib-devel curl-devel expat-devel
+mkdir work
+cd work
+export GIT_VER=2.22.4
+wget https://mirrors.edge.kernel.org/pub/software/scm/git/git-${GIT_VER}.tar.gz
+tar xzvf git-${GIT_VER}.tar.gz
+cd git-*
+sudo make configure
+sudo ./configure --prefix=/usr
+sudo make all
+sudo make install
+
