@@ -7,3 +7,4 @@ sudo pip3 install --upgrade setuptools
 sudo pip3 install requests
 # google cloud
 sudo pip3 install --upgrade google-cloud-bigquery
+sudo pip3 install  google-cloud-storage
